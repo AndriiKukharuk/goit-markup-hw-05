@@ -111,7 +111,11 @@ button:focus {
 .section {
   margin-left: auto;
   margin-right: auto;
-  background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/backgraundfone.jpg);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/backgraundfone.jpg);
 
   background-position: center;
 
@@ -247,7 +251,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 .page-header {
   margin-left: auto;
@@ -409,16 +412,21 @@ h1 {
 }
 
 /* 4 Work SVG */
-.site-nav-after::after{
-  
+/* OVERLAY */
+.link.current {
+  position: relative;
+}
+
+.link.current::after {
   content: "";
-  display: block;
- margin-bottom: 0px;
-  
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
   width: 100%;
-    height: 4px;
-    background: #2196F3;
-      border-radius: 2px;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
 }
 
 .feature-list-before::before {
@@ -527,8 +535,8 @@ a:hover {
   width: 170px;
   height: 92px;
 }
-.clients-ikon:hover{
-border: 1px solid var(--color-third);
+.clients-ikon:hover {
+  border: 1px solid var(--color-third);
 }
 .clients-link {
   display: flex;
@@ -567,7 +575,7 @@ border: 1px solid var(--color-third);
   border-radius: 50%;
 }
 /* 5 lesson modal */
-.backdrop{
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -575,25 +583,24 @@ border: 1px solid var(--color-third);
   height: 100%;
   /* background-color: rgba(255, 165, 0,0.5); */
 }
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
-.modal{
+.modal {
   height: 581px;
   width: 528px;
   background-color: #fff;
   position: absolute;
   top: 50%;
-left: 50%;
-  transform: translate(-50%,-50%);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-
-
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
-.modal button{
-  background-image: url(../images/close\ \(1\).svg);
+.modal button {
+  background-image: url(../images/close\\(1\).svg);
   width: 30px;
   height: 30px;
   padding: 0px;
@@ -602,60 +609,58 @@ left: 50%;
   cursor: pointer;
   margin-left: 490px;
   margin-top: 8px;
-
 }
-.box{
+.box {
   position: relative;
   overflow: hidden;
 }
-.overlay-text{
+.overlay-text {
   position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(33, 150, 243, 0.9);
-  
-    transform: translatey(100%);
-    transition: transform 250ms ease;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translatey(100%);
+  transition: transform 250ms ease;
 }
-.overlay-text>p{
-  font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.56;
-    
-  
-    letter-spacing: 0.03em;
-  
-    color: #FFFFFF;
-    padding: 63px 24px;
+.overlay-text > p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+  padding: 63px 24px;
 }
 .overflow-hov:hover .overlay-text {
-  transform: translatex(0);}
+  transform: translatex(0);
+}
 
-  .position{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 70px;
-    background-color: rgba(47, 48, 58, 0.8);;
-    
-  }
-  .position-top{
-position: relative;
-  }
-  .position>p{
-    font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 16px;
-      text-align: center;
-      padding-top: 27px;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-    margin: 0;
-      color: #FFFFFF;
-  }
+.position {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.position-top {
+  position: relative;
+}
+.position > p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  padding-top: 27px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0;
+  color: #ffffff;
+}
