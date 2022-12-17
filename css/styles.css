@@ -55,18 +55,18 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   padding: 32px 0px;
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link.current {
   color: var(--color-third);
 }
 .auth-nav .link-nav:hover,
-.auth-nav .link-nav:focus {
+.auth-nav .link-nav:focus,.auth-nav-bottom {
   color: var(--color-third);
 }
-.auth-nav-bottom .link-nav:hover,
-.auth-navb-bottom .link-nav:focus {
-  color: var(--color-third);
-}
+ 
 .link-nav {
   color: var(--color-link);
   font-weight: 500;
@@ -74,6 +74,9 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 32px 0px;
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -107,6 +110,9 @@ button:focus {
   letter-spacing: 0.06em;
   cursor: pointer;
   color: var(--color-primary);
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section {
   margin-left: auto;
@@ -233,10 +239,19 @@ h3 {
   padding: 6px 22px;
   border: none;
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  ;
+  
 }
 a {
   text-decoration: none;
   color: var(--color-link);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adress {
   font-family: "Roboto";
@@ -282,6 +297,9 @@ h1 {
   display: flex;
   align-items: center;
   gap: 40px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-portfolio {
@@ -291,6 +309,9 @@ h1 {
   gap: 30px;
   justify-content: center;
   margin-top: 50px;
+}
+.logo-portfolio-item{
+ transition:box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-portfolio-item:hover,
 .logo-portfolio-item:focus {
@@ -317,6 +338,9 @@ h1 {
 
   margin: 0px auto;
   margin-top: 30px;
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .conteiner {
   padding: 0 15px;
@@ -378,6 +402,9 @@ h1 {
 .auth-nav-bottom {
   margin: 0px;
   padding: 0px;
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-adress {
@@ -497,11 +524,14 @@ h1 {
   height: 100%;
   border-radius: 50%;
   fill: var(--color-social);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .bot-color {
   fill: var(--color-primary);
 }
-.link-social-bot:hover {
+.link-social-bot:hover,
+.link-social-bot:focus {
   background-color: var(--color-third);
   fill: var(--color-primary);
 }
@@ -515,7 +545,7 @@ h1 {
   align-items: center;
 }
 
-a:hover {
+a:hover,a:focus {
   color: var(--color-third);
   fill: var(--color-third);
 }
@@ -534,8 +564,10 @@ a:hover {
   border-radius: 4px;
   width: 170px;
   height: 92px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients-ikon:hover {
+.clients-ikon:hover,
+.clients-ikon:focus {
   border: 1px solid var(--color-third);
 }
 .clients-link {
@@ -599,8 +631,8 @@ a:hover {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.modal button {
-  background-image: url(../images/close\\(1\).svg);
+.modal>button {
+  background-image: url(../images/close\ \(1\).svg);
   width: 30px;
   height: 30px;
   padding: 0px;
@@ -623,7 +655,7 @@ a:hover {
   background: rgba(33, 150, 243, 0.9);
 
   transform: translatey(100%);
-  transition: transform 250ms ease;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .overlay-text > p {
   font-family: "Roboto";
@@ -637,10 +669,12 @@ a:hover {
   color: #ffffff;
   padding: 63px 24px;
 }
-.overflow-hov:hover .overlay-text {
+.overflow-hov:focus,.overflow-hov:hover .overlay-text {
   transform: translatex(0);
 }
-
+.overflow-hov{
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .position {
   position: absolute;
   bottom: 0;
